@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <title>Our store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="ajaxCalls.js"></script>
+    <script src="product.js"></script>
+    
+</head>
+<body >
+    <div data-role="page" id="store"  >
+        <!-- The landing page -->
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#store" class="ui-btn-active ui-state-persist">store</a></li>
+                    <li><a href="#cart">cart</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+
+        <div data-role="content">
+            
+            <ul data-role="listview" id="product-list" data-theme="a" data-filter="true"></ul>
+        </div>
+
+        <div  data-role="footer" data-position="fixed">
+            <a href="#cart" data-role="button" data-icon="arrow-r" data-position="fixed" id="buyBTN" >buy</a>
+        </div>
+    </div> <!-- The landing page -->
+
+    <div data-role="page" id="cart">
+        <!-- The cart page -->
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li ><a href="#store">store</a></li>
+                    <li><a href="#cart" class="ui-btn-active ui-state-persist">cart</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+
+        <div data-role="content">
+            <!--build the cart table-->
+            <ul data-role="listview"  data-theme="a" id="cart-list" data-filter="true"><li id="cart-listl"></li></ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <ul data-role="listview">
+                <li>
+                    <a data-icon="star" id="summ"></a>
+                </li>
+                <li>
+                    <a href="#thanks" data-role="button" data-icon="arrow-r" data-position="fixed" id="payBTN">pay</a>
+                </li>
+            </ul>
+            <!--<a data-icon="star" id="summ"></a>
+            <a href="#thanks" data-role="button" data-icon="arrow-r" data-position="fixed" id="payBTN">pay</a>-->
+        </div>
+    </div> <!-- The cart page -->
+
+    <div data-role="page" id="thanks">
+        <!-- The thanks page -->
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#store">store</a></li>
+                    <li><a href="#cart">cart</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+        <div data-role="content">
+           <h3>Thank you for buying!</h3>
+        </div>
+    </div> <!-- End of thanks page -->
+</body>
+</html>
